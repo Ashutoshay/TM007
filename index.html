@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!--  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
+
+    <title>Type Master</title>
+    <style>
+    	body{
+    		margin: 0;
+    		padding: 0;
+    		/*overflow-x: hidden;*/
+    	}
+    	.head{
+    		width: 100%;
+    		height: 20vh;
+    	}
+    	.head a{
+    		font-size: 40px;
+
+    	}
+    	.head i{
+    		color: #f33f3f;
+    		font-style: normal;
+    		font-weight: 700;
+    	}
+    	.sec{
+    		width: 100%;
+    		height: auto;
+    		background-color: gray;
+    	}
+    	.bod{
+    		
+    		height: 40vh;
+    		border-right: 4px solid #9A5349;
+    	}
+    	.btn1{
+    		height: 50px;
+    		width: 170px;
+    		border-radius: 10px;
+    		border:none;
+    		outline: none;
+    	}
+    	#colo{
+    		border:4px solid black;
+    		outline: none;
+    	}
+    </style>
+  </head>
+  <body>
+   <header class="">
+   		<nav class="navbar navbar-expand-lg navbar-dark bg-dark head">
+  <div class="container">
+    <a class="navbar-brand" href="#">TM<i>007</i></a>
+    <i class="fa fa-gitlab" aria-hidden="true" style="font-size: 80px;"></i>
+  </div>
+</nav>
+   </header>
+   <section class="sec">
+   	<div class="row">
+   		<div class=" col-sm-12 col-md-9">
+   			<div class="row container">
+   				<div class="col-md-12 col-sm-12 bod text-center pt-3" style="background-color: #64BD94;">
+   					<h3>WECOME to TM007(Type Master)</h3>
+   					<p>
+   						All of you can check your typing speed .
+   						For start, Please start typing.
+   					</p>
+   					<p class="pp">We are here for you.</p>
+   				</div>
+   			</div>
+   			<div class="row container">
+   				<div class="col-md-12 col-sm-12 bod text-center form-group pt-3" id="colo">
+   					<textarea class="form-control up" rows="7" cols="100" placeholder="Typing Start here......"></textarea>
+   				</div>
+   			</div>
+   		</div>
+   		<div class=" col-sm-12 col-md-3" style="height: 80vh;width: 100%;">
+   			<div class="row container">
+   				<div class="col-md-12 col-sm-12 text-center" style="height: 30vh; border-bottom: 4px solid #9A5349;">
+   					<h1 style="color: white;">Timer</h1>
+   					<h2 style="color: #64BD94" id="timer">00:00:00</h2>
+   					<!-- <button class="btn1">Start</button> -->
+   				</div>
+   				<div class="col-md-12 col-sm-12 text-center" style="height: 50vh;">
+   					<h1 style="color: white;" class="pt-3">Your Speed</h1>
+   					<h2 style="color: #64BD94" id="score">00 wpm</h2>
+   					<h1 style="color: white;" class="pt-3">Your Accuracy</h1>
+   					<h2 style="color: #64BD94" id="accuracy">00 %</h2>
+   					<button class="btn1" id="btn1">Restart</button>
+   				</div>
+   			</div>
+   		</div>
+   		
+   	</div>
+   </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Tm.js"></script>
+    <script>
+//     		function start(){
+//     	var para = document.querySelector('.pp').innerHTML;
+//     	var userPara = document.querySelector('.up').value;
+//     	var count = 0
+
+//     	for(let i = 0; i < para.length; i++){
+//     		if (para[i] == userPara[i]) {
+//     			console.log("same");
+//     		}
+//     		else{
+//     			console.log(userPara[i]);
+//     			count++;
+//     		}
+//     		console.log(count);
+//     	}
+// }
+// userPara.addEventListener("keypress", start , false)
+
+// 	function showTimer(){
+// 	let i = 1;
+// 	let j = 0;
+// 		j  = checkTime(j);
+// 	function fun(){
+		
+// 		if (i < 61) {
+// 			i  = checkTime(i);
+		
+// 			document.querySelector('#timer').innerHTML = j + ":" +  i;
+			
+// 			i++;
+// 		}
+// 		else{
+// 			j++
+// 			i  = 1;
+// 			i  = checkTime(i);
+// 			j  = checkTime(j);
+// 			document.querySelector('#timer').innerHTML = j + ":" +  i;
+			
+// 		}
+// 		if (i == 31) {
+// 		clearInterval(k);
+// 	}
+// 	}
+// 	let textAreaLength = textArea.value.length;
+// 	if (textAreaLength === 0) {
+// 	let k = setInterval(fun, 1000);
+// }
+
+// 	function checkTime(a){
+// 		if (a < 10) { 
+// 			a = '0' + a;
+// 		}
+// 		return a;
+// 	}
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// take varible
+
+
+</script>
+  </body>
+</html>
+
+
