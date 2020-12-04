@@ -10,6 +10,7 @@ var interval;
 var timerRunning = false;
 var flag = 0;
 var textLenght = originalText.length;
+var min;
 //Run timer function start here
 
 
@@ -25,6 +26,7 @@ function runTimer(){
 	timer[0] = Math.floor((timer[3]/100)/60);
 	timer[1] = Math.floor((timer[3]/100) - (timer[0] * 60));
 	timer[2] = Math.floor(timer[3] - (timer[1] * 100) - (timer[0] * 6000));
+	min = timer[0] + (timer[1]/60);
 }
 
 //check timer function here start
@@ -63,7 +65,7 @@ function spellCheck(){
 	// 		console.log(textEnter);
 	// console.log(originalText);
 		funScore();
-		let min = timer[0] + (timer[1]/60);
+		 
 		let score = count/min;
 		score = Math.floor(score);
 		document.querySelector("#score").innerHTML = score + "wpm";
