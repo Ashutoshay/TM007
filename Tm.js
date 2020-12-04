@@ -67,7 +67,7 @@ function spellCheck(){
 		let score = count/min;
 		score = Math.floor(score);
 		document.querySelector("#score").innerHTML = score + "wpm";
-		document.querySelector("#accuracy").innerHTML = (((textLenght - flag)/textLenght)*100) + "%";
+		document.querySelector("#accuracy").innerHTML = Math.floor((((textLenght - flag)/textLenght)*100)) + "%";
 			clearInterval(interval);
 			textBorder.style.borderColor = "black";
 
