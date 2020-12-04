@@ -64,9 +64,9 @@ function spellCheck(){
 		if(textEnter == originalText){
 	// 		console.log(textEnter);
 	// console.log(originalText);
-		funScore();
+		var g1 = funScore();
 		 
-		let score = count/min;
+		let score = g1/min;
 		score = Math.floor(score);
 		document.querySelector("#score").innerHTML = score + "wpm";
 		document.querySelector("#accuracy").innerHTML = Math.floor((((textLenght - flag)/textLenght)*100)) + "%";
@@ -99,6 +99,7 @@ function funScore(){
 			console.log(count);
 		}
 	}
+	return count;
 }
 
 //resetbutton start here
